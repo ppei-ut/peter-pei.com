@@ -72,7 +72,7 @@
       <div class="w3-white w3-text-grey w3-card-4">
           <div class="w3-container">
               <p class="w3-large"><b><i class="fa fa-comment fa-fw w3-margin-right w3-text-teal"></i>Feedback*</b></p>
-              <div id="form-messages"></div>
+              <div id="form-messages" class="w3-text-teal"></div>
               <form id="ajax-contact" method="post" action="mailer.php" name="feedback">
                 <div class="w3-section">
                   <label>Name</label>
@@ -163,7 +163,7 @@
 </div>
 
 <footer class="w3-container w3-teal w3-margin-left w3-margin-top">
-  <p>*Javascript form validation function included. PHP form validation & mySQL data posting coming soon.</p>
+  <p>*AJAX Form submission | JQuery | PHP - Feedback form's source code available <a href="https://github.com/ppei-ut/peter-pei.com">here</a></p>
 </footer>
 </body>
 </html>
