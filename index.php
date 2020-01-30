@@ -16,13 +16,10 @@
   </style>
   <link rel="stylesheet" href="style.css">
 
-<!-- Use AJAX for a pop-up message of form submission success -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <script src="app.js"></script>
-  <script src="js/validation.js"></script>
-
 
 </head>
 
@@ -57,13 +54,13 @@
           <ul>
               <li>HTML | CSS</li>
               <li>Javascript</li>
-              <li>PHP/MySQL</li>
+              <li>PHP | MySQL</li>
+              <li>AJAX | JQuery</li>
               <li>Bootstrap</li>
               <li>Visual Studio Code</li>
               <li>Git</li>
               <li>CodePen</li>
-              <li>Inspector/Console</li>
-              <li>Responsive design - media queries</li>
+              <li>Responsive design</li>
               <li>Adobe Photoshop | Illustrator | InDesign</li>
           </ul>
           <br>
