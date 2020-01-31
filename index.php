@@ -69,11 +69,14 @@
       <div class="w3-white w3-text-grey w3-card-4">
           <div class="w3-container">
               <p class="w3-large"><b><i class="fa fa-comment fa-fw w3-margin-right w3-text-teal"></i>Feedback*</b></p>
-              <div id="form-messages" class="w3-text-teal"></div>
               <form id="ajax-contact" method="post" action="mailer.php" name="feedback">
                 <div class="w3-section">
                   <label>Name</label>
                   <input type="text" id="name" class="w3-input" style="width:100%;" name="name" value="<?php echo $name;?>" required>
+                </div>
+                <div class="w3-section">
+                  <label>Company</label>
+                  <input type="text" id="company" class="w3-input" style="width:100%;" name="company" value="<?php echo $company;?>" required>
                 </div>
                 <div class="w3-section">
                   <label>Email</label>
@@ -84,6 +87,7 @@
                   <input type="text" id="message" class="w3-input" style="width:100%;"  name="message" value="<?php echo $message;?>" required>
                 </div>
                 <button type="submit" class="w3-button w3-margin-bottom w3-teal w3-round" value="Send">Send</button>
+                <div id="form-messages" class="w3-text-teal w3-margin-bottom" ></div>
               </form>
           </div>
       </div><br>
