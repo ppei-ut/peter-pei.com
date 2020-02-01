@@ -1,5 +1,7 @@
+
 <?php
 
+$name = $company = $email = $message = "";
 
 // Only process POST requests
 if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -69,46 +71,60 @@ else
 
 }
 
-$host_name = 'db5000278751.hosting-data.io';
-$database = 'dbs272094';
-$user_name = 'dbu64543';
-$password = 'Chaonien7!';
+$host_name = "db5000278751.hosting-data.io";
+$database = "dbs272094";
+
+
+$config = parse_ini_file('db.ini');
+$connect = new mysqli($host_name, $config['user_name'], $config['password'], $database);
 
 // Create db connection
-$connect = new mysqli($host_name, $user_name, $password, $database);
-
-// Check db connection
+    // $config = parse_ini_file('sftp://u99725325@access813157089.webspace-data.io/db.ini');
 if ($connect->connect_error)  {
     die("connection failed: " . $connect->connect_error);
 }
 
-// Create table
-$sql = 'CREATE TABLE MyMessages2 (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL,
-    company VARCHAR(30) NOT NULL,
-    email VARCHAR(50),
-    message VARCHAR(100),
-    entry_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
+// Create table (Deactivated because it already exists)
+// $sql = 'CREATE TABLE MyMessages2 (
+//     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+//     name VARCHAR(30) NOT NULL,
+//     company VARCHAR(30) NOT NULL,
+//     email VARCHAR(50),
+//     message VARCHAR(100),
+//     entry_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     
-)';
+// )';
 
-if ($connect->query($sql) === TRUE)  {
-    echo 'Table MyMessages created successfully';
-} else  {
-    echo 'Error creating table: ' . $connect->error;
-}
 
-$sql = 'INSERT INTO MyMessages2 (name, company, email, message)
-VALUES ($name, $company, $email, $message)';
+// if ($connect->query($sql) === TRUE)  {
+//     echo 'Table MyMessages2 created successfully\n';
+// } else  {
+//     echo 'Error creating table: ' . $connect->error;
+// }
+
+// $connect = new mysqli($host_name, $user_name, $password, $database);
+
+$sql = "INSERT INTO MyMessages2 (name, company, email, message)
+VALUES ('$name', '$company', '$email', '$message')";
 
 if ($connect->query($sql) === TRUE)  {
     $last_id = $connect->insert_id;
-    echo 'New record created successfully';
+    echo "New record for " . "$name" . " has been created successfully.\n";
 } else  {
-    echo 'Error: ' . $sql . '<br>' . $connect->error;
+    echo "Error: " . $sql . "<br>" . $connect->error;
 }
 
+// $sql = "SELECT id, name, company, email, message, entry_date FROM MyMessages2";
+// $result = $connect->query($sql);
+// if ($result->num_rows > 0) {
+//     // output data of each row
+//     while($row = $result->fetch_assoc()) {
+//         echo "<tr><td>" . $row["id"] . "</td><td>" . $row["name"] . "</td><td>"  . $row["company"] . "</td><td>" . $row["entry_date"] . "</td></tr>";
+//     }
+// } else {
+//     echo '0 results';
+// }
 $connect->close();
 
 ?>

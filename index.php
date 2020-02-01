@@ -91,6 +91,7 @@
               </form>
           </div>
       </div><br>
+
     <!-- End Left Column -->
     </div>
 
@@ -153,7 +154,6 @@
           <p>University of California: Riverside</p><br>
         </div>
       </div>
-
     <!-- End Right Column -->
     </div>
     
