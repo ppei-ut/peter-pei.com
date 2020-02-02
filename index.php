@@ -61,7 +61,9 @@
               <li>Git</li>
               <li>CodePen</li>
               <li>Responsive design</li>
-              <li>Adobe Photoshop | Illustrator | InDesign</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+              <li>Adobe InDesign</li>
           </ul>
           <br>
         </div>
@@ -144,8 +146,7 @@
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Javascript | PHP </b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Ongoing</h6>
-          <p>w3chools.com & developer.mozilla.org
-            </p>
+          <p><a href="https://w3schools.com">w3schools.com</a> & <a href="https://developer.mozilla.org">developer.mozilla.org</a></p>
           <hr>
         </div>
         <div class="w3-container">
@@ -164,7 +165,7 @@
 </div>
 
 <footer class="w3-container w3-teal w3-margin-left w3-margin-top">
-  <p>*AJAX Form submission | JQuery | PHP - Feedback form's source code available <a href="https://github.com/ppei-ut/peter-pei.com">here</a></p>
+  <p>*AJAX form submission | JQuery | PHP | MySQL - website's source code available <a href="https://github.com/ppei-ut/peter-pei.com">here</a></p>
 </footer>
 </body>
 </html>
